@@ -88,8 +88,6 @@ class TestFileStorage(unittest.TestCase):
         """Test that save properly saves objects to file.json"""
 
 
-class TestDBCount(unittest.TestCase):
-    """ Test for count func """
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_count(self):
         """ Test script for count func """
@@ -98,9 +96,6 @@ class TestDBCount(unittest.TestCase):
         new_state.save()
         self.assertEqual(models.storage.count("State"), count + 1)
 
-
-class TestDBGet(unittest.TestCase):
-    """Test for get func"""
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_get(self):
         """ Test script for count func """

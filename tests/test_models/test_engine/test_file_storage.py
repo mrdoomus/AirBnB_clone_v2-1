@@ -115,8 +115,6 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(json.loads(string), json.loads(js))
 
 
-class TestFSCount(unittest.TestCase):
-    """ Test for count func """
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_count(self):
         """ Test script for count func """
@@ -126,8 +124,6 @@ class TestFSCount(unittest.TestCase):
         self.assertEqual(models.storage.count("State"), count + 1)
 
 
-class TestFSGet(unittest.TestCase):
-    """Test for get func"""
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_get(self):
         """ Test script for count func """
